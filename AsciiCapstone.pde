@@ -73,20 +73,20 @@ void setup() {
 void draw() {
   String s = "";
 
-  //for (PImage picture : images) { /* miles did this */
-  for (int a = 0; a < images.length; a++) { /* miles did this */
+  //for (PImage picture : images) {
+  for (int a = 0; a < images.length; a++) { 
     background(255);
     textFont(font);
     for (int i = 0; i < 80; i++) {//70 and 60 originally
       for (int j = 0; j < 80; j++) { // every width and height pixel by pixel
-        //color filler = picture.get(int(j), int(i)); /* miles did this */
-        color filler = images[a].get(j*width/80, i*height/80); /* miles did this */
+        //color filler = picture.get(int(j), int(i)); 
+        color filler = images[a].get(j*width/80, i*height/80);
         // fill(filler); /* miles did this */
         // textAlign(CENTER);
         //gets char depending on brightness
         float value = brightness(filler);
         char charac = chars[int(value/25.5)];//original 25.5// value the less characters the higher you divide by
-        //text(charac, (j), (i)); /* miles did this */
+        //text(charac, (j), (i)); 
         print(charac);
         s += charac;
       }
